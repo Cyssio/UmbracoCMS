@@ -1,0 +1,180 @@
+﻿@using Umbraco.Cms.Web.Common.PublishedModels;
+@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage
+@{
+	Layout = "mainLayout.cshtml";
+    ViewBag.Title = Model?.Value("pageTitle") ?? null;
+
+    var onatrixImage = Model?.Value<IPublishedContent>("onatrixImage")?.Url() ?? "";
+
+    var headImage = Model?.Value<IPublishedContent>("projectTopHeadImage")?.Url() ?? "";
+
+    var pjcOneImage = Model?.Value<IPublishedContent>("projectCardImageOne")?.Url() ?? "";
+    var pjcTwoImage = Model?.Value<IPublishedContent>("projectCardImageTwo")?.Url() ?? "";
+    var pjcThreeImage = Model?.Value<IPublishedContent>("projectCardImageThree")?.Url() ?? "";
+    var pjcFourImage = Model?.Value<IPublishedContent>("projectCardImageFour")?.Url() ?? "";
+
+    var pContactImage = Model?.Value<IPublishedContent>("projectContactImage")?.Url() ?? "";
+}
+
+<header>
+    <div class="top-bar">
+        <p>@Model?.Value("headerText")</p>
+        <div class="socials">
+            <a class="fb" href=""><i class="fa-brands fa-facebook-f"></i></a>
+            <a class="x" href=""><i class="fa-brands fa-x-twitter"></i></a>
+            <a class="linkedin" href=""><i class="fa-brands fa-linkedin-in"></i></a>
+        </div>
+    </div>
+    <div class="container">
+
+        <div class="nav-bar">
+            <a href="@Model?.Value("headerHomeNavUrl")">
+                <img src="@onatrixImage" alt="Brand name: Onatrix">
+            </a>
+
+            <div class="navigation">
+                <a href="@Model?.Value("headerAboutNavUrl")"><h4>@Model?.Value("headerAboutNavText")</h4></a>
+                <a href="@Model?.Value("headerServicesNavUrl")"><h4>@Model?.Value("headerServicesNavText")</h4></a>
+                <a href="@Model?.Value("headerProjectsNavUrl")"><h4 class="project-y">@Model?.Value("headerProjectsNavText")</h4></a>
+                <a href="@Model?.Value("headerContactNavUrl")"><h4>@Model?.Value("headerContactNavText")</h4></a>
+            </div>
+
+            <p><i class="fa-solid fa-magnifying-glass"></i></p>
+        </div>
+
+    </div>
+</header>
+
+<main>
+    <section class="project-top">
+        <img src="@headImage" alt="">
+        <div class="container">
+            <h1>@Model?.Value("projectTopHeadline")</h1>
+            <div class="project-nav">
+                <a href="@Model?.Value("projectTopHomeUrl")">
+                    <p>@Model?.Value("projectTopHomeText")</p>
+                </a>
+                <i class="fa-solid fa-chevron-right"></i>
+                <p class="project-yellow">@Model?.Value("projectTopProjectText")</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="project-middle">
+        <div class="container">
+            <div class="p-collection">
+                <div class="project-cards">
+                    <div>
+                        <img src="@pjcOneImage" alt="">
+                    </div>
+                    <div class="project-padding">
+                        <h5>@Model?.Value("projectCardHeadlineOne")</h5>
+                        <p class="date-grey"><i class="fa-solid fa-calendar-days"></i> @Model?.Value("projectCardDateOne")</p>
+                        <p>@Model.Value("projectCardTextOne")</p>
+                        <p class="read-more">@Model?.Value("projectCardReadMoreOne")<i class="fa-solid fa-arrow-right"></i></p>
+                    </div>
+                </div>
+                <div class="project-cards">
+                    <div>
+                        <img src="@pjcTwoImage" alt="">
+                    </div>
+                    <div class="project-padding">
+                        <h5>@Model?.Value("projectCardHeadlineTwo")</h5>
+                        <p class="date-grey"><i class="fa-solid fa-calendar-days"></i> @Model?.Value("projectCardDateTwo")</p>
+                        <p>@Model.Value("projectCardTextOne")</p>
+                        <p class="read-more">@Model?.Value("projectCardReadMoreOne")<i class="fa-solid fa-arrow-right"></i></p>
+                    </div>
+                </div>
+                <div class="project-cards">
+                    <div>
+                        <img src="@pjcThreeImage" alt="">
+                    </div>
+                    <div class="project-padding">
+                        <h5>@Model?.Value("projectCardHeadlineThree")</h5>
+                        <p class="date-grey"><i class="fa-solid fa-calendar-days"></i> @Model?.Value("projectCardDateThree")</p>
+                        <p>@Model.Value("projectCardTextOne")</p>
+                        <p class="read-more">@Model?.Value("projectCardReadMoreOne")<i class="fa-solid fa-arrow-right"></i></p>
+                    </div>
+                </div>
+                <div class="project-cards-nob">
+                    <div>
+                        <img src="@pjcFourImage" alt="">
+                    </div>
+                    <div class="project-padding">
+                        <h5>@Model?.Value("projectCardHeadlineFour")</h5>
+                        <p class="date-grey"><i class="fa-solid fa-calendar-days"></i> @Model?.Value("projectCardDateFour")</p>
+                        <p>@Model.Value("projectCardTextOne")</p>
+                        <p class="read-more">@Model?.Value("projectCardReadMoreOne")<i class="fa-solid fa-arrow-right"></i></p>
+                    </div>
+                </div>
+                <div class="paginering">
+                    <h4 class="prev-grey">@Model?.Value("projectPagePrev")</h4>
+                    <h4 class="one-circle">@Model?.Value("projectPageOne")</h4>
+                    <h4>@Model?.Value("projectPageTwo")</h4>
+                    <h4>@Model?.Value("projectPageNext")</h4>
+                </div>
+            </div>
+            <div class="tags">
+                <h4>@Model?.Value("projectTagsHeadline")</h4>
+                <div class="diff-tags">
+                    <p>@Model?.Value("projectTagsReport")</p>
+                    <p>@Model?.Value("projectTagsBusinessPlans")</p>
+                </div>
+                <div class="diff-tags">
+                    <p>@Model?.Value("projectTagsInsights")</p>
+                    <p>@Model?.Value("projectTagsBusiness")</p>
+                    <p>@Model?.Value("projectTagsApp")</p>
+                </div>
+                <div class="diff-tags">
+                    <p>@Model?.Value("projectTagsProject")</p>
+                    <p>@Model?.Value("projectTagsFinance")</p>
+                </div>
+                <div class="diff-tags">
+                    <p>@Model?.Value("projectTagsPricing")</p>
+                </div>
+
+                <div class="online-help">
+                    <h5>@Model?.Value("projectOnlineHeadline")</h5>
+                    <p>@Model?.Value("projectOnlineText")</p>
+                    <input placeholder="@Model?.Value("projectOnlineInput")">    
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="project-contact">
+        <div class="container">
+            <div>
+                <img src="@pContactImage" alt="">      
+            </div>
+            <div class="project-contacttext">
+                <h2>@Model?.Value("projectContactHeadline")</h2>
+                <h2>@Model?.Value("projectContactHeadlineTwo")</h2>
+                <div>
+                    <i class="fa-solid fa-location-dot"></i>
+                    <h4>@Model?.Value("projectContactLoc")</h4>
+                    <p>@Model?.Value("projectContactLocText")</p>
+                </div>
+                <div>
+                    <i class="fa-solid fa-phone-flip"></i>
+                    <h4>@Model?.Value("projectContactPhone")</h4>
+                    <p>@Model?.Value("projectContactPhoneText")</p>
+                </div>
+                <div>
+                    <i class="fa-solid fa-envelope"></i>
+                    <h4>@Model?.Value("projectContactEmail")</h4>
+                    <p>@Model?.Value("projectContactEmailText")</p>
+                </div>
+            </div>
+                    
+        </div>
+    </section>
+</main>
+
+
+<footer>
+    <div class="container">
+        <p>@Model?.Value("footerText")</p>
+        <p class="f-yellow">@Model?.Value("footerTextTwo")</p>
+    </div>
+</footer>

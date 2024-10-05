@@ -1,0 +1,265 @@
+.wrapper header .top-bar {
+  display: flex;
+  justify-content: space-around;
+  gap: 180px;
+  background-color: #4F5955;
+  padding-top: 16px;
+}
+.wrapper header .top-bar p {
+  color: white;
+}
+.wrapper header .top-bar .socials .fb {
+  color: white;
+  font-size: 15px;
+  border: 1px solid white;
+  border-bottom: none;
+  border-top: none;
+  padding: 22px;
+}
+.wrapper header .top-bar .socials .linkedin {
+  color: white;
+  font-size: 15px;
+  border: 1px solid white;
+  border-bottom: none;
+  border-top: none;
+  padding: 22px;
+}
+.wrapper header .top-bar .socials .x {
+  color: white;
+  font-size: 15px;
+  padding: 17px;
+}
+.wrapper header .container {
+  padding-top: 20px;
+}
+.wrapper header .container .nav-bar {
+  display: flex;
+  justify-content: space-between;
+}
+.wrapper header .container .nav-bar p {
+  color: #4F5955;
+  font-size: 19px;
+  font-weight: 700;
+  padding-top: 7px;
+}
+.wrapper header .container .nav-bar .navigation {
+  display: flex;
+  padding-top: 15px;
+}
+.wrapper header .container .nav-bar .navigation a {
+  text-decoration: none;
+}
+.wrapper header .container .nav-bar .navigation .nav-yellow {
+  color: #D9C3A9;
+}
+.wrapper header .container .nav-bar .navigation h4 {
+  margin-right: 90px;
+  color: #4F5955;
+  font-size: 21px;
+  font-weight: 700;
+}
+.wrapper header .container .nav-bar .navigation h4:hover {
+  color: #D9C3A9;
+  transition: 0.4s;
+}
+.wrapper main .about-top {
+  padding-top: 10px;
+}
+.wrapper main .about-top img {
+  width: 100%;
+  background-color: #F7F7F7;
+}
+.wrapper main .about-top .container {
+  text-align: center;
+  position: relative;
+  bottom: 180px;
+}
+.wrapper main .about-top .container h1 {
+  font-weight: 700;
+  color: #4F5955;
+  padding-bottom: 10px;
+  font-size: 50px;
+}
+.wrapper main .about-top .container .about-nav {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+.wrapper main .about-top .container .about-nav a {
+  text-decoration: none;
+}
+.wrapper main .about-top .container .about-nav p {
+  color: #4F5955;
+  font-weight: 700;
+}
+.wrapper main .about-top .container .about-nav p:hover {
+  color: #D9C3A9;
+  transition: 0.4s;
+}
+.wrapper main .about-top .container .about-nav i {
+  color: #4F5955;
+  font-size: 14px;
+  position: relative;
+  bottom: -6px;
+}
+.wrapper main .about-top .container .about-nav .about-yellow {
+  color: #D9C3A9;
+  font-weight: 700;
+}
+.wrapper main .about-second {
+  padding-bottom: 140px;
+}
+.wrapper main .about-second .container {
+  display: flex;
+}
+.wrapper main .about-second .container .tinafox-img p {
+  padding-top: 15px;
+  color: #4F5955;
+  width: 100%;
+}
+.wrapper main .about-second .container .tinafox-info {
+  padding-left: 60px;
+}
+.wrapper main .about-second .container .tinafox-info h6 {
+  padding-bottom: 20px;
+  font-weight: 400;
+  color: #4F5955;
+  font-size: 26px;
+}
+.wrapper main .about-second .container .tinafox-info p {
+  padding-top: 8px;
+}
+.wrapper main .about-third {
+  background-color: #F7F7F7;
+}
+.wrapper main .about-third .container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.wrapper main .about-third .container .rew-yellow {
+  color: #D9C3A9;
+  font-weight: 700;
+  padding-top: 70px;
+}
+.wrapper main .about-third .container h3 {
+  color: #4F5955;
+  font-weight: 700;
+  font-size: 50px;
+  padding-bottom: 15px;
+}
+.wrapper main .about-third .container .rew-gray {
+  color: #999999;
+  font-size: 18px;
+}
+.wrapper main .about-third .container i {
+  padding-bottom: 10px;
+}
+.wrapper main .about-third .container h6 {
+  font-size: 22px;
+}
+.wrapper main .about-third .container .kevin-text {
+  position: relative;
+  bottom: -10px;
+  font-weight: 600;
+}
+.wrapper main .about-third .container img {
+  position: relative;
+  left: 303px;
+}
+.wrapper main .about-fourth {
+  padding-top: 100px;
+}
+.wrapper main .about-fourth .container .expert-title {
+  text-align: center;
+  padding-bottom: 40px;
+}
+.wrapper main .about-fourth .container .expert-title p {
+  color: #D9C3A9;
+  font-weight: 700;
+}
+.wrapper main .about-fourth .container .expert-title h2 {
+  font-size: 60px;
+  font-weight: 700;
+  color: #4F5955;
+}
+.wrapper main .about-fourth .container .expert-cards-one {
+  display: flex;
+  gap: 70px;
+}
+.wrapper main .about-fourth .container .expert-cards-one .expert-borders {
+  border: 1px solid #EAEAEA;
+}
+.wrapper main .about-fourth .container .expert-cards-one .expert-borders h4 {
+  padding-left: 20px;
+  margin-top: 20px;
+  color: #4F5955;
+}
+.wrapper main .about-fourth .container .expert-cards-one .expert-borders p {
+  padding-left: 20px;
+  color: #999999;
+}
+.wrapper main .about-fourth .container .expert-cards-two {
+  display: flex;
+  gap: 56px;
+  padding-top: 50px;
+  padding-bottom: 80px;
+}
+.wrapper main .about-fourth .container .expert-cards-two .expert-border2 {
+  border: 1px solid #EAEAEA;
+}
+.wrapper main .about-fourth .container .expert-cards-two .expert-border2 h6 {
+  padding-left: 20px;
+  margin-top: 20px;
+  color: #4F5955;
+}
+.wrapper main .about-fourth .container .expert-cards-two .expert-border2 p {
+  padding-left: 20px;
+  color: #999999;
+}
+.wrapper main .about-contact {
+  background-color: #F7F7F7;
+}
+.wrapper main .about-contact .container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding-top: 50px;
+}
+.wrapper main .about-contact .container .about-contacttext {
+  padding-top: 90px;
+}
+.wrapper main .about-contact .container .about-contacttext h2 {
+  color: #4F5955;
+  font-size: 50px;
+  font-weight: 700;
+}
+.wrapper main .about-contact .container .about-contacttext i {
+  color: #D9C3A9;
+  font-size: 25px;
+  padding-top: 10px;
+  position: relative;
+  bottom: -28px;
+}
+.wrapper main .about-contact .container .about-contacttext h4 {
+  color: #4F5955;
+  margin-left: 35px;
+  font-size: 19px;
+}
+.wrapper main .about-contact .container .about-contacttext p {
+  color: #4F5955;
+  margin-left: 35px;
+  font-size: 19px;
+}
+.wrapper footer {
+  background-color: #0E0E0E;
+}
+.wrapper footer .container {
+  display: flex;
+  gap: 5px;
+}
+.wrapper footer .container p {
+  padding-top: 18px;
+  color: #4F5955;
+}
+.wrapper footer .container .f-yellow {
+  color: #D9C3A9;
+}

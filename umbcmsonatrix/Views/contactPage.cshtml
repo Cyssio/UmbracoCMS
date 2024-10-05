@@ -1,0 +1,139 @@
+﻿@using Umbraco.Cms.Web.Common.PublishedModels;
+@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage
+@{
+	Layout = "mainLayout.cshtml";
+
+    ViewBag.Title = Model?.Value("pageTitle") ?? null;
+
+    var onatrixImage = Model?.Value<IPublishedContent>("headerImage")?.Url() ?? "";
+    var cHeadImage = Model?.Value<IPublishedContent>("contactTopImage")?.Url() ?? "";
+
+    var cContactImage = Model?.Value<IPublishedContent>("contactMiddleImage")?.Url() ?? ""; 
+
+    var mapImage = Model?.Value<IPublishedContent>("contactMapImage")?.Url() ?? ""; 
+
+    var partnerImgOne = Model?.Value<IPublishedContent>("contactImagesOne")?.Url() ?? "";
+    var partnerImgTwo = Model?.Value<IPublishedContent>("contactImagesTwo")?.Url() ?? "";
+    var partnerImgThree = Model?.Value<IPublishedContent>("contactImagesThree")?.Url() ?? "";
+    var partnerImgFour = Model?.Value<IPublishedContent>("contactImagesFour")?.Url() ?? "";
+    var partnerImgFive = Model?.Value<IPublishedContent>("contactImagesFive")?.Url() ?? "";
+    var partnerImgSix = Model?.Value<IPublishedContent>("contactImagesSix")?.Url() ?? "";
+}
+
+<header>
+    <div class="top-bar">
+        <p>@Model?.Value("headerText")</p>
+        <div class="socials">
+            <a class="fb" href=""><i class="fa-brands fa-facebook-f"></i></a>
+            <a class="x" href=""><i class="fa-brands fa-x-twitter"></i></a>
+            <a class="linkedin" href=""><i class="fa-brands fa-linkedin-in"></i></a>
+        </div>
+    </div>
+    <div class="container">
+
+        <div class="nav-bar">
+            <a href="@Model?.Value("headerHomeNavUrl")">
+                <img src="@onatrixImage" alt="Brand name: Onatrix">
+            </a>
+
+            <div class="navigation">
+                <a href="@Model?.Value("headerAboutNavUrl")"><h4>@Model?.Value("headerAboutNavText")</h4></a>
+                <a href="@Model?.Value("headerServicesNavUrl")"><h4>@Model?.Value("headerServicesNavText")</h4></a>
+                <a href="@Model?.Value("headerProjectsNavUrl")"><h4>@Model?.Value("headerProjectsNavText")</h4></a>
+                <a href="@Model?.Value("headerContactNavUrl")"><h4 class="contact-y">@Model?.Value("headerContactNavText")</h4></a>
+            </div>
+
+            <p><i class="fa-solid fa-magnifying-glass"></i></p>
+        </div>
+
+    </div>
+</header>
+
+<main>
+    <section class="contact-top">
+        <img src="@cHeadImage" alt=""> 
+        <div class="container">
+            <h1>@Model?.Value("contactTopHeadline")</h1>
+            <div class="contact-nav">
+                <a href="@Model?.Value("contactTopHomeUrl")">
+                    <p>@Model?.Value("contactTopHomeText")</p>
+                </a>
+                <i class="fa-solid fa-chevron-right"></i>
+                <p class="contact-yellow">@Model?.Value("contactTopContactText")</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact-contact">
+        <div class="container">
+            <div>
+                <img src="@cContactImage" alt="">      
+            </div>
+            <div class="contact-contacttext">
+                <h2>@Model?.Value("contactMiddleHeadline")</h2>
+                <h2>@Model?.Value("contactMiddleHeadlineTwo")</h2>
+                <div>
+                    <i class="fa-solid fa-location-dot"></i>
+                    <h4>@Model?.Value("contactMiddleLoc")</h4>
+                    <p>@Model?.Value("contactMiddleLocText")</p>
+                </div>
+                <div>
+                    <i class="fa-solid fa-phone-flip"></i>
+                    <h4>@Model?.Value("contactMiddlePhone")</h4>
+                    <p>@Model?.Value("contactMiddlePhoneText")</p>
+                </div>
+                <div>
+                    <i class="fa-solid fa-envelope"></i>
+                    <h4>@Model?.Value("contactMiddleEmail")</h4>
+                    <p>@Model?.Value("contactMiddleEmailText")</p>
+                </div>
+            </div>
+                    
+        </div>
+    </section>
+
+    <section class="mapnform">
+        <img src="@mapImage" alt="">
+        <div class="container">
+            <div class="form-contactinfo">
+                <p class="formcontact-y">@Model?.Value("contactMapSectionTitle")</p>
+                <h2>@Model?.Value("contactMapHeadline")</h2>
+                <h2>@Model?.Value("contactMapHeadlineTwo")</h2>
+                <p class="randotext">@Model?.Value("contactMapText")</p>            
+            </div>
+            <div class="contacto-form">
+                <form>
+                    <input placeholder="@Model?.Value("contactMapInputOne")" required>
+                    <input placeholder="@Model?.Value("contactMapInputTwo")" required>
+                </form>
+                <form>
+                    <input placeholder="@Model?.Value("contactMapInputThree")" required>
+                    <select>
+                        <option>@Model?.Value("contactMapOptionOne")</option>
+                        <option>@Model?.Value("contactMapOptionTwo")</option>
+                        <option>@Model?.Value("contactMapOptionThree")</option>
+                    </select>
+                </form>
+                <button>@Model?.Value("contactMapButton")</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="partners-c">
+        <div class="container">
+            <img src="@partnerImgOne" alt="">
+            <img src="@partnerImgTwo" alt="">
+            <img src="@partnerImgThree" alt="">
+            <img src="@partnerImgFour" alt="">
+            <img src="@partnerImgFive" alt="">
+            <img src="@partnerImgSix" alt="">
+        </div>
+    </section>
+</main>
+
+<footer>
+    <div class="container">
+        <p>@Model?.Value("footerText")</p>
+        <p class="f-yellow">@Model?.Value("footerTextTwo")</p>
+    </div>
+</footer>

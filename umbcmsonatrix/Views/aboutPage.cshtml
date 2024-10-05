@@ -1,0 +1,190 @@
+﻿@using Umbraco.Cms.Web.Common.PublishedModels;
+@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage
+@{
+	Layout = "mainLayout.cshtml";
+    ViewBag.Title = Model?.Value("pageTitle") ?? null;
+
+    var onatrixImage = Model?.Value<IPublishedContent>("onatrixImage")?.Url() ?? "";
+    var headImage = Model?.Value<IPublishedContent>("aboutTopHeadImage")?.Url() ?? "";
+    var secondImage = Model?.Value<IPublishedContent>("aboutSecondImage")?.Url() ?? "";
+    var thirdImage = Model?.Value<IPublishedContent>("aboutThirdImage")?.Url() ?? "";
+
+    var fourthOneImage = Model?.Value<IPublishedContent>("aboutFourthImageOne")?.Url() ?? "";
+    var fourthTwoImage = Model?.Value<IPublishedContent>("aboutFourthImageTwo")?.Url() ?? "";
+    var fourthThreeImage = Model?.Value<IPublishedContent>("aboutFourthImageThree")?.Url() ?? "";
+
+    var expertOneImage = Model?.Value<IPublishedContent>("aboutFourthExpertImageOne")?.Url() ?? ""; 
+    var expertTwoImage = Model?.Value<IPublishedContent>("aboutFourthExpertImageTwo")?.Url() ?? "";
+    var expertThreeImage = Model?.Value<IPublishedContent>("aboutFourthExpertImageThree")?.Url() ?? "";
+    var expertFourImage = Model?.Value<IPublishedContent>("aboutFourthExpertImageFour")?.Url() ?? "";
+
+    var contactInfoImage = Model?.Value<IPublishedContent>("aboutContactImage")?.Url() ?? "";
+}
+
+<header>
+    <div class="top-bar">
+        <p>@Model?.Value("headerAddressText")</p>
+        <div class="socials">
+            <a class="fb" href=""><i class="fa-brands fa-facebook-f"></i></a>
+            <a class="x" href=""><i class="fa-brands fa-x-twitter"></i></a>
+            <a class="linkedin" href=""><i class="fa-brands fa-linkedin-in"></i></a>
+        </div>
+    </div>
+    <div class="container">
+
+        <div class="nav-bar">
+            <a href="@Model?.Value("headerHomeNavUrl")">
+                <img src="@onatrixImage" alt="Brand name: Onatrix">
+            </a>
+
+            <div class="navigation">
+                <a href="@Model?.Value("headerAboutNavUrl")"><h4 class="nav-yellow">@Model?.Value("headerAboutNavText")</h4></a>
+                <a href="@Model?.Value("headerServicesNavUrl")"><h4>@Model?.Value("headerServiceNavText")</h4></a>
+                <a href="@Model?.Value("headerProjectsNavUrl")"><h4>@Model?.Value("headerProjectsNavText")</h4></a>
+                <a href="@Model?.Value("headerContactNavUrl")"><h4>@Model?.Value("headerContactsNavText")</h4></a>
+            </div>
+
+            <p><i class="fa-solid fa-magnifying-glass"></i></p>
+        </div>
+
+    </div>
+</header>
+
+<main> 
+    <section class="about-top">
+        <img src="@headImage" alt="">
+        <div class="container">
+            <h1>@Model?.Value("aboutTopHeadline")</h1>
+            <div class="about-nav">
+                <a href="@Model?.Value("aboutTopHomeNavUrl")">
+                    <p>@Model?.Value("aboutTopHomeNavText")</p>
+                </a>
+                <i class="fa-solid fa-chevron-right"></i>
+                <p class="about-yellow">@Model?.Value("aboutTopAboutNavText")</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="about-second">
+        <div class="container">
+            <div class="tinafox-img">
+                <img src="@secondImage" alt=""> 
+                <p>@Model?.Value("aboutSecondImageText")</p>
+            </div>                 
+            <div class="tinafox-info">
+                <h6>@Model?.Value("aboutSecondHeadlineQuote")</h6>
+                <p>@Model?.Value("aboutSecondTextOne")</p>
+                <p>@Model?.Value("aboutSecondTextTwo")</p>
+                <p>@Model?.Value("aboutSecondTextThree")</p>
+                <p>@Model?.Value("aboutSecondTextFour")</p>
+                <p>@Model?.Value("aboutSecondTextFive")</p>
+                <p>@Model?.Value("aboutSecondTextSix")</p>
+                <p>@Model?.Value("aboutSecondTextSeven")</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="about-third">
+            <div class="container">
+                <div class="rewiew-info">
+                    <p class="rew-yellow">@Model?.Value("aboutThirdSectionTitle")</p>
+                    <h3>@Model?.Value("aboutThirdHeadline")</h3>
+                    <p class="rew-gray">@Model?.Value("aboutThirdText")</p>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <p class="kevin-text">@Model?.Value("aboutThirdKevin")</p>
+                    <h6>@Model?.Value("aboutThirdSwebank")</h6>
+                </div>
+                <div>
+                    <img src="@thirdImage" alt="">
+                </div>
+            </div>
+    </section>
+
+    <section class="about-fourth">
+        <div class="container">
+            <div class="expert-title">
+                <p>@Model?.Value("aboutFourthSectionTitle")</p>
+                <h2>@Model?.Value("aboutFourthHeadline")</h2>
+                <h2>@Model?.Value("aboutFourthHeadlineTwo")</h2>
+            </div>
+            <div class="expert-cards-one">
+                <div class="expert-borders">
+                    <img src="@fourthOneImage" alt="">
+                    <h4>@Model?.Value("aboutFourthCardOne")</h4>
+                    <p>@Model?.Value("aboutFourthCardTextOne")</p>
+                </div>
+                <div class="expert-borders">
+                    <img src="@fourthTwoImage" alt="">
+                    <h4>@Model?.Value("aboutFourthCardTwo")</h4>
+                    <p>@Model?.Value("aboutFourthCardTextTwo")</p>
+                </div>
+                <div class="expert-borders"> 
+                    <img src="@fourthThreeImage" alt="">
+                    <h4>@Model?.Value("aboutFourthCardThree")</h4>
+                    <p>@Model?.Value("aboutFourthCardTextThree")</p>
+                </div>
+            </div>
+            <div class="expert-cards-two">
+                <div class="expert-border2">
+                    <img src="@expertOneImage" alt="">
+                    <h6>@Model?.Value("aboutFourthExpertHeadOne")</h6>
+                    <p>@Model?.Value("aboutFourthExpertTextOne")</p>
+                </div>
+                <div class="expert-border2">
+                    <img src="@expertTwoImage" alt="">
+                    <h6>@Model?.Value("aboutFourthExpertHeadTwo")</h6>
+                    <p>@Model?.Value("aboutFourthExpertTextTwo")</p>
+                </div>
+                <div class="expert-border2">
+                    <img src="@expertThreeImage" alt="">
+                    <h6>@Model?.Value("aboutFourthExpertHeadThree")</h6>
+                    <p>@Model?.Value("aboutFourthExpertTextThree")</p>
+                </div>
+                <div class="expert-border2">
+                    <img src="@expertFourImage"alt="">
+                    <h6>@Model?.Value("aboutFourthExpertHeadFour")</h6>
+                    <p>@Model?.Value("aboutFourthExpertTextFour")</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="about-contact">
+        <div class="container">
+            <div>
+                <img src="@contactInfoImage" alt="">      
+            </div>
+            <div class="about-contacttext">
+                <h2>@Model?.Value("aboutContactHeadline")</h2>
+                <h2>@Model?.Value("aboutContactHeadlineTwo")</h2>
+                <div>
+                    <i class="fa-solid fa-location-dot"></i>
+                    <h4>@Model?.Value("aboutContactLoc")</h4>
+                    <p>@Model?.Value("aboutContactLocText")</p>
+                </div>
+                <div>
+                    <i class="fa-solid fa-phone-flip"></i>
+                    <h4>@Model?.Value("aboutContactPhone")</h4>
+                    <p>@Model?.Value("aboutContactPhoneText")</p>
+                </div>
+                <div>
+                    <i class="fa-solid fa-envelope"></i>
+                    <h4>@Model?.Value("aboutContactEmail")</h4>
+                    <p>@Model?.Value("aboutContactEmailText")</p>
+                </div>
+            </div>
+                    
+        </div>
+    </section>
+</main>
+
+<footer>
+    <div class="container">
+        <p>@Model?.Value("footerText")</p>
+        <p class="f-yellow">@Model?.Value("footerTextTwo")</p>
+    </div>
+</footer>

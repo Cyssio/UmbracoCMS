@@ -1,0 +1,216 @@
+.wrapper header .top-bar {
+  display: flex;
+  justify-content: space-around;
+  gap: 180px;
+  background-color: #4F5955;
+  padding-top: 16px;
+}
+.wrapper header .top-bar p {
+  color: white;
+}
+.wrapper header .top-bar .socials .fb {
+  color: white;
+  font-size: 15px;
+  border: 1px solid white;
+  border-bottom: none;
+  border-top: none;
+  padding: 22px;
+}
+.wrapper header .top-bar .socials .linkedin {
+  color: white;
+  font-size: 15px;
+  border: 1px solid white;
+  border-bottom: none;
+  border-top: none;
+  padding: 22px;
+}
+.wrapper header .top-bar .socials .x {
+  color: white;
+  font-size: 15px;
+  padding: 17px;
+}
+.wrapper header .container {
+  padding-top: 20px;
+}
+.wrapper header .container .nav-bar {
+  display: flex;
+  justify-content: space-between;
+}
+.wrapper header .container .nav-bar p {
+  color: #4F5955;
+  font-size: 19px;
+  font-weight: 700;
+  padding-top: 7px;
+}
+.wrapper header .container .nav-bar .navigation {
+  display: flex;
+  padding-top: 15px;
+}
+.wrapper header .container .nav-bar .navigation a {
+  text-decoration: none;
+}
+.wrapper header .container .nav-bar .navigation .service-y {
+  color: #D9C3A9;
+}
+.wrapper header .container .nav-bar .navigation h4 {
+  margin-right: 90px;
+  color: #4F5955;
+  font-size: 21px;
+  font-weight: 700;
+}
+.wrapper header .container .nav-bar .navigation h4:hover {
+  color: #D9C3A9;
+  transition: 0.4s;
+}
+.wrapper main .service-top {
+  padding-top: 10px;
+}
+.wrapper main .service-top img {
+  width: 100%;
+  background-color: #F7F7F7;
+}
+.wrapper main .service-top .container {
+  text-align: center;
+  position: relative;
+  bottom: 180px;
+}
+.wrapper main .service-top .container h1 {
+  font-weight: 700;
+  color: #4F5955;
+  padding-bottom: 10px;
+  font-size: 50px;
+}
+.wrapper main .service-top .container .service-nav {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+.wrapper main .service-top .container .service-nav a {
+  text-decoration: none;
+}
+.wrapper main .service-top .container .service-nav p {
+  color: #4F5955;
+  font-weight: 700;
+}
+.wrapper main .service-top .container .service-nav p:hover {
+  color: #D9C3A9;
+  transition: 0.4s;
+}
+.wrapper main .service-top .container .service-nav i {
+  color: #4F5955;
+  font-size: 14px;
+  position: relative;
+  bottom: -6px;
+}
+.wrapper main .service-top .container .service-nav .service-yellow {
+  color: #D9C3A9;
+  font-weight: 700;
+}
+.wrapper main .services-middle .container .service-title {
+  display: grid;
+  justify-content: center;
+  text-align: center;
+}
+.wrapper main .services-middle .container .service-title h3 {
+  color: #4F5955;
+  font-size: 50px;
+  font-weight: 700;
+}
+.wrapper main .services-middle .container .service-cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 30px;
+  padding-top: 40px;
+  padding-bottom: 100px;
+}
+.wrapper main .services-middle .container .service-cards div {
+  background-color: white;
+  box-shadow: rgb(207, 207, 207) 0px 0px 12px 0px;
+  cursor: pointer;
+}
+.wrapper main .services-middle .container .service-cards div img {
+  width: 100%;
+}
+.wrapper main .services-middle .container .service-cards div h5 {
+  color: #4F5955;
+  font-size: 25px;
+  font-weight: 700;
+  padding: 20px;
+}
+.wrapper main .services-middle .container .service-cards div p {
+  padding-top: 20px;
+  margin-right: 50px;
+  padding-left: 40px;
+  padding-bottom: 10px;
+}
+.wrapper main .services-middle .container .paginering {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+  padding-bottom: 50px;
+  position: relative;
+  bottom: 60px;
+}
+.wrapper main .services-middle .container .paginering h4 {
+  color: #4F5955;
+  font-size: 22px;
+  padding-top: 10px;
+  cursor: pointer;
+}
+.wrapper main .services-middle .container .paginering .prev-grey {
+  color: #EAEAEA;
+}
+.wrapper main .services-middle .container .paginering .one-circle {
+  border: 1px solid #ECECEC;
+  border-radius: 100%;
+  padding-left: 19px;
+  height: 50px;
+  width: 50px;
+}
+.wrapper main .service-contact {
+  background-color: #F7F7F7;
+}
+.wrapper main .service-contact .container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding-top: 50px;
+}
+.wrapper main .service-contact .container .service-contacttext {
+  padding-top: 90px;
+}
+.wrapper main .service-contact .container .service-contacttext h2 {
+  color: #4F5955;
+  font-size: 50px;
+  font-weight: 700;
+}
+.wrapper main .service-contact .container .service-contacttext i {
+  color: #D9C3A9;
+  font-size: 25px;
+  padding-top: 10px;
+  position: relative;
+  bottom: -28px;
+}
+.wrapper main .service-contact .container .service-contacttext h4 {
+  color: #4F5955;
+  margin-left: 35px;
+  font-size: 19px;
+}
+.wrapper main .service-contact .container .service-contacttext p {
+  color: #4F5955;
+  margin-left: 35px;
+  font-size: 19px;
+}
+.wrapper footer {
+  background-color: #0E0E0E;
+}
+.wrapper footer .container {
+  display: flex;
+  gap: 5px;
+}
+.wrapper footer .container p {
+  padding-top: 18px;
+  color: #4F5955;
+}
+.wrapper footer .container .f-yellow {
+  color: #D9C3A9;
+}

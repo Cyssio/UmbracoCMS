@@ -1,0 +1,146 @@
+﻿@using Umbraco.Cms.Web.Common.PublishedModels;
+@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage
+@{
+	Layout = "mainLayout.cshtml";
+	ViewBag.Title = Model?.Value("pageTitle") ?? null;
+    var onatrixImage = Model?.Value<IPublishedContent>("onatrixImage")?.Url() ?? "";
+
+    var headImage = Model?.Value<IPublishedContent>("serviceTopHeadImage")?.Url() ?? "";
+
+    var sCardOneImage = Model?.Value<IPublishedContent>("serviceCardsImageOne")?.Url() ?? "";
+    var sCardTwoImage = Model?.Value<IPublishedContent>("serviceCardsImageTwo")?.Url() ?? "";
+    var sCardThreeImage = Model?.Value<IPublishedContent>("serviceCardsImageThree")?.Url() ?? "";
+    var sCardFourImage = Model?.Value<IPublishedContent>("serviceCardsImageFour")?.Url() ?? "";
+    var sCardFiveImage = Model?.Value<IPublishedContent>("serviceCardsImageFive")?.Url() ?? "";
+    var sCardSixImage = Model?.Value<IPublishedContent>("serviceCardsImageSix")?.Url() ?? "";
+
+    var sContactImage = Model?.Value<IPublishedContent>("serviceContactImage")?.Url() ?? "";
+}
+
+<header>
+    <div class="top-bar">
+        <p>@Model?.Value("servicesHeaderText")</p>
+        <div class="socials">
+            <a class="fb" href=""><i class="fa-brands fa-facebook-f"></i></a>
+            <a class="x" href=""><i class="fa-brands fa-x-twitter"></i></a>
+            <a class="linkedin" href=""><i class="fa-brands fa-linkedin-in"></i></a>
+        </div>
+    </div>
+    <div class="container">
+
+        <div class="nav-bar">
+            <a href="@Model?.Value("servicesHomeNavUrl")">
+                <img src="@onatrixImage" alt="Brand name: Onatrix">
+            </a>
+
+            <div class="navigation">
+                <a href="@Model?.Value("servicesAboutUrl")"><h4>@Model?.Value("servicesAboutUrlText")</h4></a>
+                <a href="@Model?.Value("servicesServicesUrl")"><h4 class="service-y">@Model?.Value("servicesServicesUrlText")</h4></a>
+                <a href="@Model?.Value("servicesProjectsUrl")"><h4>@Model?.Value("servicesProjectsUrlText")</h4></a>
+                <a href="@Model?.Value("servicesContactUrl")"><h4>@Model?.Value("servicesContactUrlText")</h4></a>
+            </div>
+
+            <p><i class="fa-solid fa-magnifying-glass"></i></p>
+        </div>
+
+    </div>
+</header>
+
+<main>
+    <section class="service-top">
+        <img src="@headImage" alt="">
+        <div class="container">
+            <h1>@Model?.Value("serviceTopHeadline")</h1>
+            <div class="service-nav">
+                <a href="@Model?.Value("serviceTopHomeNavUrl")">
+                    <p>@Model?.Value("serviceTopHomeNavText")</p>
+                </a>
+                <i class="fa-solid fa-chevron-right"></i>
+                <p class="service-yellow">@Model?.Value("serviceTopServiceText")</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="services-middle">
+        <div class="container">
+            <div class="service-title">
+                <h3>@Model?.Value("serviceMiddleHeadline")</h3>
+                <h3>@Model?.Value("serviceMiddleHeadlineTwo")</h3>
+            </div>
+            <div class="service-cards">
+                <div>
+                    <h5>@Model?.Value("serviceCardsHeadlineOne")</h5>
+                    <img src="@sCardOneImage" alt="">
+                    <p>@Model?.Value("serviceCardsTextOne")</p>
+                </div>
+                <div>
+                    <h5>@Model?.Value("serviceCardsHeadlineTwo")</h5>
+                    <img src="@sCardTwoImage" alt="">
+                    <p>@Model?.Value("serviceCardsTextTwo")</p>
+                </div>
+                <div>
+                    <h5>@Model?.Value("serviceCardsHeadlineThree")</h5>
+                    <img src="@sCardThreeImage" alt="">
+                    <p>@Model?.Value("serviceCardsTextThree")</p>
+                </div>
+                <div>
+                    <h5>@Model?.Value("serviceCardsHeadlineFour")</h5>
+                    <img src="@sCardFourImage" alt="">
+                    <p>@Model?.Value("serviceCardsTextFour")</p>
+                </div>
+                <div>
+                    <h5>@Model?.Value("serviceCardsHeadlineFive")</h5>
+                    <img src="@sCardFiveImage" alt="">
+                    <p>@Model?.Value("serviceCardsTextFive")</p>
+                </div>
+                <div>
+                    <h5>@Model?.Value("serviceCardsHeadlineSix")s</h5>
+                    <img src="@sCardSixImage" alt="">
+                    <p>@Model?.Value("serviceCardsTextSix")</p>
+                </div>
+            </div>
+
+            <div class="paginering">
+                <h4 class="prev-grey">@Model?.Value("serviceMiddlePagePrev")</h4>
+                <h4 class="one-circle">@Model?.Value("serviceMiddlePageOne")</h4>
+                <h4>@Model?.Value("serviceMiddlePageTwo")</h4>
+                <h4>@Model?.Value("serviceMiddlePageNext")</h4>
+            </div>
+        </div>
+    </section>
+
+    <section class="service-contact">
+        <div class="container">
+            <div>
+                <img src="@sContactImage" alt="">      
+            </div>
+            <div class="service-contacttext">
+                <h2>@Model?.Value("serviceContactHeadline")</h2>
+                <h2>@Model?.Value("serviceContactHeadlineTwo")</h2>
+                <div>
+                    <i class="fa-solid fa-location-dot"></i>
+                    <h4>@Model?.Value("serviceContactLoc")</h4>
+                    <p>@Model?.Value("serviceContactLocText")</p>
+                </div>
+                <div>
+                    <i class="fa-solid fa-phone-flip"></i>
+                    <h4>@Model?.Value("serviceContactPhone")</h4>
+                    <p>@Model?.Value("serviceContactPhoneText")</p>
+                </div>
+                <div>
+                    <i class="fa-solid fa-envelope"></i>
+                    <h4>@Model?.Value("serviceContactEmail")</h4>
+                    <p>@Model?.Value("serviceContactEmailText")</p>
+                </div>
+            </div>
+                    
+        </div>
+    </section>
+</main>
+
+<footer>
+    <div class="container">
+        <p>@Model?.Value("footerText")</p>
+        <p class="f-yellow">@Model?.Value("footerTextTwo")</p>
+    </div>
+</footer>
